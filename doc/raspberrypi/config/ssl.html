@@ -1,0 +1,38 @@
+<pre>
+    install
+        https://certbot.eff.org/lets-encrypt/debianother-nginx
+
+        sudo apt-get install certbot python-certbot-nginx
+        sudo certbot certonly --nginx
+        
+    /etc/nginx/sites-available/{domain}
+        server {
+            listen 443 ssl;
+
+            server_name {domain};
+
+            root /var/www/html;
+            index index.html index.htm index.nginx-debian.html;
+
+            location / {
+                    try_files $uri $uri/ =404;
+            }
+
+            ssl_certificate /etc/letsencrypt/live/{domain}/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/{domain}/privkey.pem;
+        }
+
+
+        server {
+                listen 80;
+                server_name {domain};
+                return 301 https://$host$request_uri;
+        }
+
+    sudo ln -s /etc/nginx/sites-available/{domain} /etc/nginx/sites-enabled/{domain}
+    sudo rm /etc/nginx/sites-enabled/default
+
+    sudo service nginx restart
+
+    sudo ufw allow https
+</pre>

@@ -1,0 +1,19 @@
+<pre>
+    sudo apt-get install fail2ban
+
+    sudo vim /etc/fail2ban/jail.local
+        [DEFAULT]
+        ignoreip = 127.0.0.1 192.168.0.0/24
+        action = %(action_mwl)s
+
+        # sshd
+        [sshd]
+        enabled = true
+        port = ssh
+        maxretry = 5
+        findtime = 300 # 5m
+        bantime = 3600 # 1h
+        logpath = /var/log/auth.log
+
+    sudo service fail2ban restart
+</pre>

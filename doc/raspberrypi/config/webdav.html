@@ -1,0 +1,19 @@
+<pre>
+    http://nginx.org/en/docs/http/ngx_http_dav_module.html
+
+    sudo apt-get install nginx nginx-extras
+
+    sudo apt-get install apache2-utils
+    sudo htpasswd -c /etc/nginx/.htpasswd-private {name}
+    sudo htpasswd -c /etc/nginx/.htpasswd-public {name}
+
+    /etc/nginx/sites-available/{domain}
+        location /music {
+            charset utf-8;
+            alias /home/{name}/disk1/music;
+            autoindex on;
+            auth_basic "MUSIC";
+            auth_basic_user_file /etc/nginx/.htpasswd-public;
+            dav_access all:r;
+        }
+</pre>

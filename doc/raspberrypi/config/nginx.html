@@ -1,0 +1,12 @@
+<pre>
+    sudo apt-get install nginx
+
+    sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/{domain}
+
+    sudo vim /etc/nginx/sites-available/{domain}
+        server_name {domain};
+
+    sudo service nginx restart
+
+    sudo ufw allow http
+</pre>

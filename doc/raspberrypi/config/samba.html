@@ -1,0 +1,21 @@
+<pre>
+    sudo apt-get install samba && apt-get install samba-common-bin
+
+    /etc/samba/smb.conf
+        [homes]
+            comment = Home Directories
+            browseable = no
+            read only = no
+            create mask = 0777
+            directory mask = 0777
+            valid users = %S
+
+    sudo smbpasswd -a {name}
+
+    sudo service smbd restart
+
+    sudo ufw allow Samba
+    sudo ufw allow Samba
+
+    네트워크에 스캔 안되면 PC 재부팅
+</pre>

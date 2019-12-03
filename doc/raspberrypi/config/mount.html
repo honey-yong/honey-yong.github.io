@@ -1,0 +1,13 @@
+<pre>
+    sudo fdisk -l
+
+    mkdir ~/disk1
+
+    sudo mount /dev/sda1 ~/disk1
+
+    ls -l /dev/disk/by-uuid
+        'a23cf4fe-fe2f-456d-8959-4fe1a5d62733 -> ../../sda1'
+
+    sudo vim /etc/fstab
+        UUID=a23cf4fe-fe2f-456d-8959-4fe1a5d62733 /home/{name}/disk1 ext4 rw,exec,user,suid 0 0
+</pre>
