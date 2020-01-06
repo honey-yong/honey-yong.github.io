@@ -1,0 +1,15 @@
+<pre>
+    sudo apt-get install mariadb-server
+
+    create user '{user name}'@'%' identified by '{password}';
+
+    create database {database name};
+    
+    GRANT ALL PRIVILEGES on {database name}.* TO '{user name}'@'%';
+    FLUSH PRIVILEGES;
+
+    sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf
+        bind-address 주석
+
+    sudo ufw allow mysql
+</pre>
