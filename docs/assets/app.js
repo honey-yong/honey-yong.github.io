@@ -79,9 +79,15 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/ 	// __webpack_hash__
+/******/ 	__webpack_require__.h = "2b41d956776c49dea19c";
+/******/
+/******/ 	// __webpack_chunkname__
+/******/ 	__webpack_require__.cn = "assets/app";
+/******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.tsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -30113,6 +30119,20 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./src/app.scss":
+/*!**********************!*\
+  !*** ./src/app.scss ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/app.tsx":
 /*!*********************!*\
   !*** ./src/app.tsx ***!
@@ -30147,16 +30167,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var ReactDOM = __importStar(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
-var main_1 = __importDefault(__webpack_require__(/*! ./components/main/main */ "./src/components/main/main.tsx"));
-ReactDOM.render(React.createElement(main_1.default, null), document.getElementById("app"));
+var Main_1 = __importDefault(__webpack_require__(/*! ./components/Main */ "./src/components/Main.tsx"));
+ReactDOM.render(React.createElement(Main_1.default, null), document.getElementById("app"));
 
 
 /***/ }),
 
-/***/ "./src/components/main/main.tsx":
-/*!**************************************!*\
-  !*** ./src/components/main/main.tsx ***!
-  \**************************************/
+/***/ "./src/components/Main.module.scss":
+/*!*****************************************!*\
+  !*** ./src/components/Main.module.scss ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+/* harmony default export */ __webpack_exports__["default"] = ({"main":"Tpz-weAg4CglA4YR55gCQ"});
+
+/***/ }),
+
+/***/ "./src/components/Main.tsx":
+/*!*********************************!*\
+  !*** ./src/components/Main.tsx ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30181,17 +30215,31 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var react_2 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Main_module_scss_1 = __importDefault(__webpack_require__(/*! ./Main.module.scss */ "./src/components/Main.module.scss"));
 var Main = /** @class */ (function (_super) {
     __extends(Main, _super);
     function Main() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Main.prototype.render = function () {
-        return react_1.default.createElement("div", null, "main");
+        return react_1.default.createElement("div", { className: Main_module_scss_1.default.main }, "main");
     };
     return Main;
 }(react_2.Component));
 exports.default = Main;
+
+
+/***/ }),
+
+/***/ 0:
+/*!******************************************!*\
+  !*** multi ./src/app.tsx ./src/app.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./src/app.tsx */"./src/app.tsx");
+module.exports = __webpack_require__(/*! ./src/app.scss */"./src/app.scss");
 
 
 /***/ })

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/components/Main.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,wBAAwB","file":"assets/app.css","sourcesContent":[".main {\n  color: green;\n  background-color: yellow;\n}"],"sourceRoot":""}
